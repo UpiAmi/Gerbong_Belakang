@@ -32,39 +32,57 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        backgroundColor: Colors.blueAccent,
-           appBar: AppBar(
-             backgroundColor: Colors.red,
-             foregroundColor: Colors.yellow,
-             title: Text("Aplikasi SIB6B"),
-             centerTitle: true,
-             leading: Icon(Icons.account_circle, color: Colors.white,size: 40,),
-             actions: [
-               IconButton(onPressed: (){}, icon: Icon(Icons.add_a_photo_outlined, size: 25, color: Colors.blueAccent,)),
-               Padding(padding: EdgeInsets.all(3)),
-               IconButton(onPressed: (){}, icon: Icon(Icons.more_vert, size: 25, color: Colors.blueAccent))],
-           ) ,
-        bottomNavigationBar: NavigationBar(
-          backgroundColor: Colors.indigo,
-          indicatorColor: Colors.indigoAccent,
-          destinations: const <Widget>[
-            NavigationDestination(
-              selectedIcon: Icon(Icons.home),
-              icon: Icon(Icons.home_outlined),
-              label: 'Home',
-            ),
-            NavigationDestination(
-              icon: Badge(child: Icon(Icons.notifications_sharp, color: Colors.black,)),
-              label: 'Notifications',
-            ),
-            NavigationDestination(
-              icon: Badge(label: Text('200'), child: Icon(Icons.messenger_sharp)),
-              label: 'Messages',
-            ),
-          ],
-        ),
-      )
+      home: project2(),
+    );
+  }
+}
+
+class project1 extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    // TODO: implement build
+    return Scaffold(
+      backgroundColor: Colors.blueAccent,
+      appBar: AppBar(
+        backgroundColor: Colors.red,
+        foregroundColor: Colors.yellow,
+        title: Text("Aplikasi SIB6B"),
+        centerTitle: true,
+        leading: Icon(Icons.account_circle, color: Colors.white,size: 40,),
+        actions: [
+          IconButton(onPressed: (){}, icon: Icon(Icons.add_a_photo_outlined, size: 25, color: Colors.blueAccent,)),
+          Padding(padding: EdgeInsets.all(3)),
+          IconButton(onPressed: (){}, icon: Icon(Icons.more_vert, size: 25, color: Colors.blueAccent))],
+      ) ,
+      bottomNavigationBar: NavigationBar(
+        backgroundColor: Colors.indigo,
+        indicatorColor: Colors.indigoAccent,
+        destinations: const <Widget>[
+          NavigationDestination(
+            selectedIcon: Icon(Icons.home),
+            icon: Icon(Icons.home_outlined),
+            label: 'Home',
+          ),
+          NavigationDestination(
+            icon: Badge(child: Icon(Icons.notifications_sharp, color: Colors.black,)),
+            label: 'Notifications',
+          ),
+          NavigationDestination(
+            icon: Badge(label: Text('200'), child: Icon(Icons.messenger_sharp)),
+            label: 'Messages',
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class project2 extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    // TODO: implement build
+    return Scaffold(
+
     );
   }
 }
