@@ -32,7 +32,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       debugShowCheckedModeBanner: false,
-      home: project2(),
+      home: Beranda(),
     );
   }
 }
@@ -68,7 +68,7 @@ class project1 extends StatelessWidget {
             label: 'Notifications',
           ),
           NavigationDestination(
-            icon: Badge(label: Text('200'), child: Icon(Icons.messenger_sharp)),
+            icon: Badge(label: Text('200.000.000'), child: Icon(Icons.messenger_sharp)),
             label: 'Messages',
           ),
         ],
@@ -83,6 +83,27 @@ class project2 extends StatelessWidget {
     // TODO: implement build
     return Scaffold(
 
+    );
+  }
+}
+
+class Beranda extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    // TODO: implement build
+    return Scaffold(
+      backgroundColor: Colors.redAccent,
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            ElevatedButton(onPressed: (){}, child: Text("Project1")),
+            Padding(padding: EdgeInsetsGeometry.all(25)),
+            ElevatedButton(onPressed: (){}, child: Text("Project2")),
+            ElevatedButton(onPressed: (){}, child: Text("Project3")),
+          ],
+        ),
+      ) ,
     );
   }
 }
