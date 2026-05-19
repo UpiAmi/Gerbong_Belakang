@@ -97,10 +97,16 @@ class Beranda extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            ElevatedButton(onPressed: (){}, child: Text("Project1")),
-            Padding(padding: EdgeInsetsGeometry.all(25)),
-            ElevatedButton(onPressed: (){}, child: Text("Project2")),
-            ElevatedButton(onPressed: (){}, child: Text("Project3")),
+            ElevatedButton(onPressed: (){
+              Navigator.push(context, MaterialPageRoute(builder: (context) => project1(),));
+            }, child: Text("Project1")),
+            Padding(padding: EdgeInsets.all(25)),
+            ElevatedButton(onPressed: (){
+              Navigator.push(context, MaterialPageRoute(builder: (context) => project2(),));
+            }, child: Text("Project2")),
+            Padding(padding: EdgeInsets.all(25)),
+            ElevatedButton(onPressed: (){}, child: Text("About")),
+            Padding(padding: EdgeInsets.all(25)),
           ],
         ),
       ) ,
