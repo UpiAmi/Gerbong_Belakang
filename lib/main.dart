@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sib6b_u/SI_UM/Page/mainpage.dart';
 
 void main() {
   runApp(const MyApp());
@@ -32,7 +33,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       debugShowCheckedModeBanner: false,
-      home: Beranda(),
+      home: UnivPage(),
     );
   }
 }
@@ -105,11 +106,32 @@ class Beranda extends StatelessWidget {
               Navigator.push(context, MaterialPageRoute(builder: (context) => project2(),));
             }, child: Text("Project2")),
             Padding(padding: EdgeInsets.all(25)),
-            ElevatedButton(onPressed: (){}, child: Text("About")),
+            ElevatedButton(onPressed: (){
+              Navigator.push(context, MaterialPageRoute(builder: (context) => About(),));
+            }, child: Text("About")),
             Padding(padding: EdgeInsets.all(25)),
           ],
         ),
       ) ,
+    );
+  }
+}
+
+class About extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    // TODO: implement build
+    return Scaffold(
+      backgroundColor: Colors.orange,
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text('Dibuat Oleh : Luthfi Azmi'),
+            Text('NIM : 2313056')
+          ],
+        ),
+      ),
     );
   }
 }
